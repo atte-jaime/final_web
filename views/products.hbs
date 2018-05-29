@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+    <header>
+        <article id="menu-bar">
+            <p class='essential'>ESSENTIAL SOUNDS</p>
+            <span style="background-color:#505050"></span>
+            <p class='nav-options'>NEW RELEASES</p>
+            <span style="background-color:#505050"></span>
+            <p class='nav-options'>POPULARS</p>
+        </article>
+    </header>
+
+    <div class="intro">
+        <div class="titulo-seccion">Vinyl Records</div>
+        <div class="orden-productos"></div>
+    </div>
+
+    <div class="content">
+        <section class="filtros">
+            <h2>Filtrar por:</h2>
+            <h2>Género</h2>
+            <span></span>
+            <a href="/products?genero=Rock">Rock</a>
+            <a href="/products?genero=Indie Rock">Indie Rock</a>
+            <a href="/products?genero=Electronic">Electronica</a>
+            <a href="/products?genero=Pop">Pop</a>
+            <a href="/products">Todas</a>
+
+            <h2>Formato</h2>
+            <span></span>
+            <a href="/products?formato=Single">Single</a>
+            <a href="/products?formato=EP">EP</a>
+            <a href="/products?formato=LP">LP</a>
+            <a href="/products">Todas</a>
+
+            <h2>Precio</h2>
+            <span></span>
+            <a href="/products?min=10&max=19.99">$10 - $19.99</a>
+            <a href="/products?min=20&max=29.99">$20 - $29.99</a>
+            <a href="/products?min=30&max=39.99">$30 - $39.99</a>
+            <a href="/products">Cualquier precio</a>
+
+            <h2>Puntaje</h2>
+            <span></span>
+            <a href="/products?puntaje=1">&lt;1</a>
+            <a href="/products?puntaje=2">&lt;2</a>
+            <a href="/products?puntaje=3">&lt;3</a>
+            <a href="/products?puntaje=4">&lt;4</a>
+            <a href="/products?puntaje=5">&lt;5</a>
+            <a href="/products">Cualquier puntaje</a>
+        </section>
+        <section class="productos">
+            {{#each productos}}
+            <!--Parte mostrar cada disco individual-->
+
+            <div class="disco" data-id="{{this._id}}">
+                <a href="/disco?album={{album}}">
+                    <div class="imagen" style="background-image: url('{{img_principal}}');"></div>
+                </a>
+                <div class="info">
+                    <a href="/disco?album={{album}}">
+                        <h1 id="album">{{album}}</h1>
+                    </a>
+                    <div class="datos-container">
+                        <p id="artista">{{artista}}</p>
+                        <p id="formato">{{formato}}</p>
+                    </div>
+                    <p id="price">${{precio}}</p>
+                    <p></p>
+                </div>
+            </div>
+
+            {{/each}}
+        </section>
+    </div>
+
+
+</body>
+
+</html>

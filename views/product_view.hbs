@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{disc.album}} by {{disc.artista}}</title>
+    <link rel="stylesheet" href="css/product_view.css">
+</head>
+
+<body>
+    <header>
+        <article id="menu-bar">
+            <p class='essential'>ESSENTIAL SOUNDS</p>
+            <span style="background-color:#505050"></span>
+            <p class='nav-options'>NEW RELEASES</p>
+            <span style="background-color:#505050"></span>
+            <p class='nav-options'>POPULARS</p>
+        </article>
+    </header>
+
+    <div class="producto">
+        <div class="img-container">
+            <div class="imagen" style="background-image: url('{{disc.img_principal}}')"></div>
+            <button class="add-cart">Agregar al carrito</button>
+        </div>
+        <div class="info">
+            <h1>{{disc.album}}</h1>
+            <p><b>Artista: </b>{{disc.artista}}</p>
+            <span></span>
+            <p><b>Género: </b>{{disc.genero}}</p>
+            <p><b>Formato: </b>{{disc.formato}}</p>
+            <p><b>Lanzamiento: </b>{{disc.lanzamiento}}</p>
+            <span></span>
+            <p><b>Puntaje: </b>{{disc.puntaje}}</p>
+            <span></span>
+            <div class="price"> <b>$ {{disc.precio}}</b></div>
+        </div>
+    </div>
+</body>
+
+</html>
