@@ -22,8 +22,14 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
 });
 
 app.get('/', (req,res)=>{
-    res.render('landing', {
-        titulo: "Home"
+    var listRepro = db.collection('listRepro').find();
+
+    listRepro.toArray((err, result) => {
+        console.log(result[0].cancion[0].nombre);
+        res.render('landing', {
+            titulo: 'Home',
+            lista: result
+        });
     });
 });
 
@@ -31,6 +37,7 @@ app.get('/products', (req, res) => {
 
     var prod = db.collection('albums')
         .find();
+
 
     if (req.query.min) {
         prod.filter({
@@ -49,24 +56,23 @@ app.get('/products', (req, res) => {
         });
     }
 
-
-    if (req.query.genero)
+    if (req.query.genero){
         prod.filter({
-            genero: req.query.genero
-        });
-
-    if (req.query.formato)
+                genero: req.query.genero
+            });
+    }
+    
+    if (req.query.formato){
         prod.filter({
             formato: req.query.formato
         });
-
-
-
+    }
+    
     prod.toArray((err, result) => {
         res.render('products', {
             productos: result
         });
-    })
+    });
 });
 
 app.get('/disco', (req, res) => {
@@ -83,3 +89,4 @@ app.get('/disco', (req, res) => {
     });
 
 });
+

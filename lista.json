@@ -1,0 +1,40 @@
+{
+    "lista": [{
+        "artista": "Childish Gambino",
+        "album": "Awaken, My Love!",
+        "cancion": [{
+            "link": "mp3/Awaken/MeAndYourMama.mp3",
+            "nombre": "Me and Your Mama"
+        }, {
+            "link": "mp3/Awaken/HaveSomeLove.mp3",
+            "nombre": "Have Some Love"
+        }, {
+            "link": "mp3/Awaken/Boogieman.mp3",
+            "nombre": "Boogieman"
+        }, {
+            "link": "mp3/Awaken/Zombies.mp3",
+            "nombre": "Zombies"
+        }, {
+            "link": "mp3/Awaken/Riot.mp3",
+            "nombre": "Riot"
+        }, {
+            "link": "mp3/Awaken/Redbone.mp3",
+            "nombre": "Redbone"
+        }, {
+            "link": "mp3/Awaken/California.mp3",
+            "nombre": "California"
+        }, {
+            "link": "mp3/Awaken/Terrified.mp3",
+            "nombre": "Terrified"
+        }, {
+            "link": "mp3/Awaken/BabyBoy.mp3",
+            "nombre": "Baby Boy"
+        }, {
+            "link": "mp3/Awaken/TheNightMeAndYourMamaMet.mp3",
+            "nombre": "The Night Me And Your Mama Met"
+        }, {
+            "link": "mp3/Awaken/StandTall.mp3",
+            "nombre": "Stand Tall"
+        }]
+    }]
+}
