@@ -114,8 +114,156 @@ header {
     }
 }
 
+#banner {
+    display: flex;
+    height: 100vh;
+    padding: 1rem 12rem;
+    .title-container {
+        padding-top: 11rem;
+        h1 {
+            padding-top: 3rem;
+            font-size: 9rem;
+            color: $white;
+            span {
+                color: $red;
+            }
+        }
+        #title-animation {
+            position: relative;
+            transition: all ease-out .5s;
+            span {
+                background-color: $dark-beige;
+                transition: all ease-out .2s;
+                &:hover {
+                    opacity: 0;
+                }
+            }
+            &::after {
+                content: attr(data-hover);
+                position: absolute;
+                left: 0;
+                width: 100%;
+                text-align: left;
+                opacity: 0;
+                background-color: $red;
+                color: $white;
+                transform: translate(-150%, 0);
+                transition: all ease-out .5s;
+            }
+            &:hover::after {
+                opacity: 1;
+                transform: translate(0, 0); //transition-delay: .4s;
+            }
+        }
+        button {
+            margin-top: 4rem;
+            font-size: 1.5rem;
+        }
+    }
+    .images-container {
+        z-index: 98;
+        flex: 1;
+        position: relative;
+        img {
+            width: 23rem;
+            height: 23rem;
+            position: absolute;
+            right: 15rem;
+            bottom: -10rem;
+            transition: all .5s;
+            &:hover {
+                transform: translate(15%, -15%);
+            }
+        }
+        #img2 {
+            right: 10rem;
+            bottom: -2.5rem;
+        }
+        #img1 {
+            right: 5rem;
+            bottom: 5rem;
+        }
+    }
+}
+
+.parallax-1 {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#info {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    #promo {
+        flex: 2;
+        width: 100%;
+        display: flex;
+        background-color: $beige;
+        .image-container {
+            flex: 1.1;
+            padding: 12% 0 12% 12%;
+        }
+        .info-container {
+            flex: 1.8;
+            position: relative;
+            display: inline;
+            margin: auto;
+            h1 {
+                color: $grey;
+                font-size: 4rem;
+                span {
+                    background-color: $red;
+                    color: $white;
+                }
+            }
+            p {
+                margin-left: 5%;
+                width: 40%;
+                margin-top: 3rem;
+                font-size: 1.2rem;
+                font-family: $text-font;
+            }
+        }
+    }
+    #carac {
+        flex: 1;
+        display: flex;
+        background-color: $dark-beige;
+        justify-content: space-evenly;
+        .caracts {
+            width: 20%;
+            //padding: 20% 0%;
+            color: $grey;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            img {
+                width: 40px;
+                height: 40px;
+                margin: 5% auto;
+            }
+            h1 {
+                margin-top: 10%;
+                font-weight: 700;
+                font-style: italic;
+                font-size: 1.8rem;
+            }
+            p {
+                width: 90%;
+                margin: 10% 0;
+                text-align: center;
+                font-family: $text-font;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
 #main-footer {
-    margin-top: 40px;
     display: flex;
     width: 100%;
     height: 30vh;
