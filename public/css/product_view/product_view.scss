@@ -127,6 +127,11 @@ header {
                 color: $white;
                 background-color: rgb(110, 38, 46);
             }
+
+             &:active {
+                 position: relative;
+                 top: 1px;
+             }
         }
     }
     .info {
@@ -157,6 +162,97 @@ header {
             font-family: $title-font;
             font-size: 2rem;
             color: $red;
+        }
+    }
+}
+
+#main-footer {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    background-color: #202020;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: $white;
+    #legal {
+        flex: 1;
+        p {
+            color: $white;
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: 400;
+            transition: all .3s;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+    #newsletter {
+        flex: 1;
+        font-size: 0;
+        display: flex;
+        align-content: center;
+        label {
+            width: 100%;
+            p {
+                font-weight: 400;
+                font-style: italic;
+                font-size: 1.5rem;
+                text-align: center;
+                color: $white;
+                margin-bottom: 2rem;
+            }
+            input {
+                border: 2px solid $red;
+                background-color: transparent;
+                width: 15rem;
+                margin-left: 20%;
+                padding: .5rem;
+                font-family: $title-font;
+                font-weight: 400;
+                color: $white;
+                font-size: 1rem;
+                border-color: $white;
+            }
+            button {
+                box-sizing: border-box;
+                
+                border: 2px solid $white;
+                background-color: transparent;
+                padding: .5rem 2.5rem;
+                font-family: $title-font;
+                font-weight: 400;
+                font-size: 1rem;
+                color: $white;
+
+                transition: all 1s;
+                margin: 0;
+                &:hover {
+                    color: $white;
+                    border: 0;
+                    background-color: $red
+                }
+
+                &:active{
+                    position: relative;
+                    top: 1px;
+                }
+
+            }
+        }
+    }
+    #redes {
+        flex: 1;
+        box-sizing: content-box;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-content: center;
+        img {
+            width: 50px;
+            height: 50px;
+            fill: $white;
         }
     }
 }
