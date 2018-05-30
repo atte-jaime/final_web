@@ -199,7 +199,7 @@ header {
     display: flex;
     flex-flow: column nowrap;
     #promo {
-        flex: 2;
+        flex: 1;
         width: 100%;
         display: flex;
         background-color: $beige;
@@ -231,12 +231,12 @@ header {
     }
     #carac {
         flex: 1;
+        padding: 4% 0;
         display: flex;
         background-color: $dark-beige;
         justify-content: space-evenly;
         .caracts {
-            width: 20%;
-            //padding: 20% 0%;
+            width: 20%; //padding: 20% 0%;
             color: $grey;
             display: flex;
             flex-flow: column;
@@ -258,6 +258,165 @@ header {
                 text-align: center;
                 font-family: $text-font;
                 font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+#galery {
+    width: 100%;
+    height: 100vh;
+    background-color: $dark-beige;
+    display: flex;
+    #lorde {
+        flex: 1;
+        background-size: cover;
+        padding: 5%;
+        .info-product-container {
+            visibility: hidden;
+            .name-album {
+                color: $white;
+                font-size: 5rem;
+            }
+            .name-artist {
+                font-weight: 700;
+                font-size: 2.5rem;
+                color: $grey;
+                span {
+                    background-color: $white;
+                }
+            }
+            p {
+                font-size: 2rem;
+                color: $white;
+                padding: 5%;
+            }
+            ol {
+                padding-left: 10%;
+                li {
+                    font-size: 1.5rem;
+                    color: $white;
+                }
+            }
+            .price {
+                font-family: $title-font;
+                font-weight: 900;
+                font-style: italic;
+                font-size: 3rem;
+                text-align: right;
+                color: $grey;
+                span {
+                    padding: 2% 3%;
+                    background-color: $white;
+                }
+            }
+        }
+        &:hover {
+            .info-product-container {
+                visibility: visible;
+            }
+        }
+    }
+    #else {
+        flex: 1.5;
+        display: flex;
+        flex-flow: column;
+        #flume {
+            flex: 1;
+            background-size: cover;
+            background-position-y: 50%;
+        }
+        #else-2 {
+            flex: 1.2;
+            display: flex;
+            #every {
+                flex: 1;
+                background-size: cover;
+            }
+            #tame {
+                flex: 1;
+                background-size: cover;
+            }
+        }
+    }
+    .album {
+        position: relative;
+        transition: all .3s .1s;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            transition: all .3s .1s;
+            filter: opacity(1);
+        }
+        &:hover {
+            filter: brightness(1.2);
+        }
+        &:hover::after {
+            background-color: $white;
+            filter: opacity(0.5);
+        }
+    }
+}
+
+.list_container {
+    background-color: blue;
+    width: 100%;
+    height: auto;
+    display: flex;
+    .list {
+        background-color: aqua;
+        width: 20%;
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        #playlist {
+            list-style: none;
+            .song {
+                background-color: darkorange;
+                width: 100%;
+                height: 80px;
+                margin-top: 10px;
+                padding-top: 10px;
+                a {
+                    margin-left: 30px;
+                }
+                .current-song {
+                    a {
+                        color: blue;
+                    }
+                }
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .songs {
+        background-color: black;
+        width: 80%;
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .preview {
+            background-color: green;
+            width: 500px;
+            height: 500px;
+            h1,
+            h2 {
+                margin: 20px;
+                color: white;
+                text-align: center;
+            }
+            audio {
+                width: 500px;
             }
         }
     }
