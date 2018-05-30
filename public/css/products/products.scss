@@ -24,7 +24,7 @@ p {
 
 p {
     color: $grey;
-    font-family: $title-font;
+    font-family: $title-font !important;
 }
 
 h1 {
@@ -80,26 +80,36 @@ header {
         display: flex;
         width: 70%;
         justify-content: space-between;
-        align-items: center;
         padding: 10px;
         text-align: center;
         color: $white;
-        span {
-            width: 3rem;
-            height: 1px;
-        }
-        .nav-options {
-            color: $white;
-            font-size: 20px;
-            transition: all .3s;
-            &:hover {
-                color: $red;
+        .temas-container {
+            flex: 1;
+            padding: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            span {
+                width: 5%;
+                height: 1px;
+            }
+            .nav-options {
+                color: $white;
+                font-size: 20px;
+                transition: all .3s;
+                &:hover {
+                    color: $red;
+                }
             }
         }
-        .essential {
-            color: $white;
-            font-size: 30px;
-            font-weight: 700;
+        a {
+            flex: 2;
+            .essential {
+                position: absolute;
+                color: $white !important;
+                font-size: 30px !important;
+                font-weight: 700 !important;
+            }
         }
     }
 }

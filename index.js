@@ -21,9 +21,15 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
     app.listen(1234);
 });
 
+app.get('/', (req,res)=>{
+    res.render('landing', {
+        titulo: "Home"
+    });
+});
+
 app.get('/products', (req, res) => {
 
-    var prod = db.collection('datos')
+    var prod = db.collection('albums')
         .find();
 
     if (req.query.min) {
@@ -65,12 +71,12 @@ app.get('/products', (req, res) => {
 
 app.get('/disco', (req, res) => {
     //console.log(req.query.album)
-    var disco = db.collection('datos').find({
+    var disco = db.collection('albums').find({
         album: req.query.album
     });
 
     disco.toArray((err, result) => {
-        console.log(result[0])
+       // console.log(result[0])
         res.render('product_view', {
             disc: result[0]
         });
