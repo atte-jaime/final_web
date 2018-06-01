@@ -370,15 +370,13 @@ header {
     z-index: 100;
 }
 
-canvas {
-    background: grey;
-}
 
 #canvas {
-    background-color: bisque;
+    z-index: 1;
+    background-color: $red;
     margin-top: 150px; //position: fixed;
     width: 1536px;
-    height: 100px;
+    height: 400px;
 }
 
 audio {
@@ -415,7 +413,8 @@ audio {
         }
     }
     .songs {
-        background-color: grey;
+        z-index: 2;
+        //background-color: grey;
         overflow: hidden;
         width: 80%;
         height: 90vh;

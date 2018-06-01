@@ -58,7 +58,7 @@ window.onload = function () {
     var WIDTH = canvas.width;
     var HEIGHT = canvas.height;
 
-    var barWidth = 3;
+    var barWidth = 1;
     var barHeight;
     var x = 0;
 
@@ -69,13 +69,13 @@ window.onload = function () {
 
         analyser.getByteFrequencyData(dataArray);
 
-        ctx.fillStyle = "#000";
+        ctx.fillStyle = "#fff";
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
         for (var i = 0; i < bufferLength; i++) {
             barHeight = dataArray[i] / 2;
 
-            ctx.fillStyle = "rgb(255,255,255)";
+            ctx.fillStyle = "#D43A4C";
             ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
 
             x += barWidth + 1;

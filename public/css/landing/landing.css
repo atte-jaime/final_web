@@ -485,15 +485,12 @@ header #menu-bar a .essential {
   z-index: 100;
 }
 
-canvas {
-  background: grey;
-}
-
 #canvas {
-  background-color: bisque;
+  z-index: 1;
+  background-color: #D43A4C;
   margin-top: 150px;
   width: 1536px;
-  height: 100px;
+  height: 400px;
 }
 
 audio {
@@ -540,7 +537,7 @@ audio {
 }
 
 .list_container .songs {
-  background-color: grey;
+  z-index: 2;
   overflow: hidden;
   width: 80%;
   height: 90vh;
