@@ -12,13 +12,19 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 // Conectarse a Base de Datos
-MongoClient.connect('mongodb://localhost:27017', function (err, client) {
+MongoClient.connect(`mongodb+srv://cluster0-fzipc.mongodb.net/tienda`,
+    {
+        auth: {
+            user: 'atte_jaime',
+            password: '123porJaimeG$'
+        }
+    }, function (err, client) {
     if (err) throw err;
 
-    db = client.db('productos');
+    db = client.db('tienda');
 
     // Iniciar servidor
-    app.listen(1234);
+    app.listen(process.env.PORT || 1234);
 });
 
 app.get('/', (req,res)=>{
