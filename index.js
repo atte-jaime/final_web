@@ -12,7 +12,7 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 // Conectarse a Base de Datos
-MongoClient.connect(`mongodb+srv://cluster0-fzipc.mongodb.net/tienda`,
+MongoClient.connect(`mongodb+srv://cluster0-iirqb.mongodb.net/tienda`,
     {
         auth: {
             user: 'atte_jaime',
