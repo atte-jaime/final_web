@@ -12,7 +12,7 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 // Conectarse a Base de Datos
-MongoClient.connect(`mongodb+srv://cluster0-iirqb.mongodb.net/tienda?retryWrites=true`, {
+MongoClient.connect(`mongodb+srv://cluster0-iirqb.mongodb.net/tienda`, {
         auth: {
             user: 'atte_jaime',
             password: '123porJaimeG$'
@@ -29,10 +29,10 @@ MongoClient.connect(`mongodb+srv://cluster0-iirqb.mongodb.net/tienda?retryWrites
 );
 
 app.get('/', (req, res) => {
-    var listRepro = db.collection('listRepro').find();
+    var listaRepro = db.collection('listRepro').find();
 
-    listRepro.toArray((err, result) => {
-        console.log(result[0].cancion[0].nombre);
+    listaRepro.toArray((err, result) => {
+        //console.log(result[0].cancion[0].nombre);
         res.render('landing', {
             titulo: 'Home',
             lista: result
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 
 app.get('/products', (req, res) => {
 
-    var prod = db.collection('albums')
+    var prod = db.collection('productos')
         .find();
 
 
@@ -84,7 +84,7 @@ app.get('/products', (req, res) => {
 
 app.get('/disco', (req, res) => {
     //console.log(req.query.album)
-    var disco = db.collection('albums').find({
+    var disco = db.collection('productos').find({
         album: req.query.album
     });
 
