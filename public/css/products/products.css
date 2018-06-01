@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,400i,700,700i,900,900i|Josefin+Sans");
+body,
+html,
+div,
+section,
+p {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
+  color: #505050;
+  font-family: "Barlow Condensed", "Helvetica", sans-serif !important;
+}
+
+h1 {
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #505050;
+  font-size: 1rem;
+  font-family: "Josefin Sans", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+a:hover {
+  color: #D43A4C;
+}
+
+button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #D43A4C;
+  background-color: transparent;
+  padding: .5rem 2.5rem;
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
+  font-weight: 400;
+  color: #D43A4C;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin: 0;
+}
+
+button:hover {
+  color: #ffffff;
+  border: 0;
+  background-color: #D43A4C;
+}
+
+header {
+  width: 100vw;
+  height: 60px;
+  z-index: 99;
+  top: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+header #menu-bar {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+header #menu-bar .temas-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #menu-bar .temas-container span {
+  width: 5%;
+  height: 1px;
+}
+
+header #menu-bar .temas-container .nav-options {
+  color: #ffffff;
+  font-size: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header #menu-bar .temas-container .nav-options:hover {
+  color: #D43A4C;
+}
+
+header #menu-bar a {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+header #menu-bar a .essential {
+  position: absolute;
+  color: #ffffff !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+}
+
+.intro {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 3% 0;
+}
+
+.intro .titulo-seccion {
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.content {
+  margin: 0 auto;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .filtros {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  position: relative;
+  width: 20%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.content .filtros h2 {
+  color: #505050;
+  font-size: 1rem;
+  font-family: "Josefin Sans", "Arial", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 2%;
+}
+
+.content .filtros span {
+  background-color: #FFE4D8;
+  width: 80%;
+  height: 2px;
+  margin-bottom: 2%;
+}
+
+.content .productos {
+  position: relative;
+  width: 80%;
+  padding: 0 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.content .productos .disco {
+  height: 320px;
+  width: 200px;
+  margin-left: 4%;
+  margin-bottom: 40px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.content .productos .disco:hover {
+  -webkit-box-shadow: 0px 0px 77px -33px #804e4e;
+          box-shadow: 0px 0px 77px -33px #804e4e;
+}
+
+.content .productos .disco .imagen {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.content .productos .disco .info {
+  height: 100px;
+  position: relative;
+  margin-top: 15px;
+  padding-left: 2%;
+}
+
+.content .productos .disco .info #album {
+  font-size: 1.5rem;
+}
+
+.content .productos .disco .info .datos-container {
+  margin-top: 10px;
+}
+
+.content .productos .disco .info .datos-container #artista,
+.content .productos .disco .info .datos-container #formato {
+  font-family: "Josefin Sans", "Arial", sans-serif;
+  font-size: .8rem;
+  color: #505050;
+}
+
+.content .productos .disco .info #price {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
+  font-weight: 300;
+  text-align: right;
+  color: #D43A4C;
+}
+
+#main-footer {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  background-color: #202020;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+
+#main-footer #legal {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#main-footer #legal p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#main-footer #legal p:hover {
+  color: #D43A4C;
+}
+
+#main-footer #newsletter {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#main-footer #newsletter label {
+  width: 100%;
+}
+
+#main-footer #newsletter label p {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+#main-footer #newsletter label input {
+  border: 2px solid #D43A4C;
+  background-color: transparent;
+  width: 15rem;
+  margin-left: 20%;
+  padding: .5rem;
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1rem;
+  border-color: #ffffff;
+}
+
+#main-footer #newsletter label button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  padding: .5rem 2.5rem;
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin: 0;
+}
+
+#main-footer #newsletter label button:hover {
+  color: #ffffff;
+  border: 0;
+  background-color: #D43A4C;
+}
+
+#main-footer #newsletter label button:active {
+  position: relative;
+  top: 1px;
+}
+
+#main-footer #redes {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#main-footer #redes img {
+  width: 50px;
+  height: 50px;
+  fill: #ffffff;
+}
+/*# sourceMappingURL=products.css.map */
