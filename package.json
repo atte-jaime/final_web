@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "./node_modules/.bin/nodemon index",
+    "mongo": "D:/\"MongoDB\"Server/3.6/bin/mongod.exe"
   },
   "author": "Jaime Giraldo & Mateo Zuluaga",
   "license": "ISC",

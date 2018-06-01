@@ -12,22 +12,23 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 // Conectarse a Base de Datos
-MongoClient.connect(`mongodb+srv://cluster0-iirqb.mongodb.net/tienda`,
-    {
+MongoClient.connect(`mongodb+srv://cluster0-iirqb.mongodb.net/tienda?retryWrites=true`, {
         auth: {
             user: 'atte_jaime',
             password: '123porJaimeG$'
         }
-    }, function (err, client) {
-    if (err) throw err;
+    },
+    function (err, client) {
+        if (err) throw err;
 
-    db = client.db('tienda');
+        db = client.db('tienda');
 
-    // Iniciar servidor
-    app.listen(process.env.PORT || 1234);
-});
+        // Iniciar servidor
+        app.listen(process.env.PORT || 1234);
+    }
+);
 
-app.get('/', (req,res)=>{
+app.get('/', (req, res) => {
     var listRepro = db.collection('listRepro').find();
 
     listRepro.toArray((err, result) => {
@@ -62,18 +63,18 @@ app.get('/products', (req, res) => {
         });
     }
 
-    if (req.query.genero){
+    if (req.query.genero) {
         prod.filter({
-                genero: req.query.genero
-            });
+            genero: req.query.genero
+        });
     }
-    
-    if (req.query.formato){
+
+    if (req.query.formato) {
         prod.filter({
             formato: req.query.formato
         });
     }
-    
+
     prod.toArray((err, result) => {
         res.render('products', {
             productos: result
@@ -88,11 +89,10 @@ app.get('/disco', (req, res) => {
     });
 
     disco.toArray((err, result) => {
-       // console.log(result[0])
+        // console.log(result[0])
         res.render('product_view', {
             disc: result[0]
         });
     });
 
 });
-
